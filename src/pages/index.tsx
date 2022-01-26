@@ -40,7 +40,6 @@ export default function Home() {
                                 type="password" 
                                 id="password"
                                 focusBorderColor="pink.500"
-                                mt="8"
                                 bgColor="gray.900"
                                 variant="filled"
                                 _hover={{
