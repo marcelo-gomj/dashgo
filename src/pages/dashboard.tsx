@@ -30,14 +30,13 @@ const options = {
         enabled: false
     }, 
 
-    xaxis: {
+    yaxis: {
         type: 'datetime', 
         axisBorder: {
             color: theme.colors.gray[600]
         },
         axisTicks: {
             color: theme.colors.gray[600]
-
         },
         categories: [
             '2021-03-19T00:00:00:000Z',
@@ -48,6 +47,16 @@ const options = {
             '2021-03-24T00:00:00:000Z',
             '2021-03-25T00:00:00:000Z',
         ]
+    },
+
+    fill: {
+        opacity: 0.3,
+        type: 'gradient', 
+        gradient: {
+            shade: 'dark',
+            opacityFrom: 0.7,
+            opacityTo: 0.3
+        }
     }
 
 };
