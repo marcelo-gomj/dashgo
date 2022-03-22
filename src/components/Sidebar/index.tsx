@@ -13,12 +13,14 @@ export function Sidebar() {
                <NavLink  href={'/users'} icon={RiContactsLine}>Úsuários</NavLink>
 
             </NavSection>
+
             <NavSection title="AUTOMACÃO">
 
                <NavLink href={'/form'} icon={RiInputMethodLine}>Formulários</NavLink>
                <NavLink href={'/automatic'} icon={RiGitMergeLine}>Automacão</NavLink>
             
             </NavSection>
+         
          </Stack>
       </Box>
    );
