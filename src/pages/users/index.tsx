@@ -1,11 +1,22 @@
 import { Box, Button, Flex, Table, Checkbox, Tbody, 
-Heading, Icon, Thead, Tr, Th, Td, Text } from '@chakra-ui/react';
-import { RiAddLine, RiPencilLine, RiUserAddLine } from 'react-icons/ri';
+Heading, Icon, Thead, Tr, Th, Td, Text, useBreakpointValue } from '@chakra-ui/react';
+import Link from 'next/link';
+
+
+import { RiAddLine, RiPencilLine,  } from 'react-icons/ri';
 import { Header } from '../../components/Header';
 import { Pagination } from '../../components/Pagination';
 import { Sidebar } from '../../components/Sidebar';
 
+
+
 export default function UserList(){
+    const isWideVersion = useBreakpointValue({
+        base : false,
+        lg : true,
+    })
+
+
     return (
         <Box>
             <Header />
@@ -38,22 +49,24 @@ export default function UserList(){
                             Úsuarios
                         </Heading>
 
-                        <Button 
-                            as="a" 
-                            size="sm" 
-                            fontSize="sm" 
-                            colorScheme="pink"
-                            leftIcon={<Icon fontSize="20" as={RiAddLine}></Icon>}
+                        <Link href="/users/create" passHref>
+                            <Button 
+                                as="a" 
+                                size="sm" 
+                                fontSize="sm" 
+                                colorScheme="pink"
+                                leftIcon={<Icon fontSize="20" as={RiAddLine}></Icon>}
 
-                        >
-                            Criar novo úsuario
-                        </Button>
+                            >
+                                Criar novo úsuario
+                            </Button>
+                        </Link>
                     </Flex>
 
             <Table colorScheme="whiteAlpha">
                 <Thead>
                     <Tr>
-                        <Th px="6" color="gray.300" width="8">
+                        <Th px={["4", "4", "6"]} color="gray.300" width="8">
                             <Checkbox 
                                 colorScheme="pink" 
                             />
@@ -67,7 +80,7 @@ export default function UserList(){
                 </Thead>
                 <Tbody>
                     <Tr>
-                        <Td px="6">
+                        <Td px={["4", "4", "6"]} >
                             <Checkbox 
                                 colorScheme="pink" 
                             />
@@ -87,22 +100,10 @@ export default function UserList(){
                                 </Text>
                             </Box>
                         </Td>
-                        <Td>03 de Abril, 2022</Td>
-                        <Td>
-                            <Button 
-                                as="a" 
-                                size="sm" 
-                                fontSize="sm" 
-                                colorScheme="purple"
-                                leftIcon={<Icon fontSize="16" as={RiPencilLine}></Icon>}
-                                
-                            >
-                                Editar
-                            </Button>
-                        </Td>
+                      { isWideVersion && <Td>03 de Abril, 2022</Td>}
                     </Tr>
                     <Tr>
-                        <Td px="6">
+                        <Td px={["4", "4", "6"]} >
                             <Checkbox 
                                 colorScheme="pink" 
                             />
@@ -122,22 +123,10 @@ export default function UserList(){
                                 </Text>
                             </Box>
                         </Td>
-                        <Td>03 de Abril, 2022</Td>
-                        <Td>
-                            <Button 
-                                as="a" 
-                                size="sm" 
-                                fontSize="sm" 
-                                colorScheme="purple"
-                                leftIcon={<Icon fontSize="16" as={RiPencilLine}></Icon>}
-                                
-                            >
-                                Editar
-                            </Button>
-                        </Td>
+                        { isWideVersion && <Td>03 de Abril, 2022</Td>}
                     </Tr>
                     <Tr>
-                        <Td px="6">
+                        <Td px={["4", "4", "6"]} >
                             <Checkbox 
                                 colorScheme="pink" 
                             />
@@ -157,22 +146,10 @@ export default function UserList(){
                                 </Text>
                             </Box>
                         </Td>
-                        <Td>03 de Abril, 2022</Td>
-                        <Td>
-                            <Button 
-                                as="a" 
-                                size="sm" 
-                                fontSize="sm" 
-                                colorScheme="purple"
-                                leftIcon={<Icon fontSize="16" as={RiPencilLine}></Icon>}
-                                
-                            >
-                                Editar
-                            </Button>
-                        </Td>
+                        { isWideVersion && <Td>03 de Abril, 2022</Td> }
                     </Tr>
                     <Tr>
-                        <Td px="6">
+                        <Td px={["4", "4", "6"]} >
                             <Checkbox 
                                 colorScheme="pink" 
                             />
@@ -192,19 +169,7 @@ export default function UserList(){
                                 </Text>
                             </Box>
                         </Td>
-                        <Td>03 de Abril, 2022</Td>
-                        <Td>
-                            <Button 
-                                as="a" 
-                                size="sm" 
-                                fontSize="sm" 
-                                colorScheme="purple"
-                                leftIcon={<Icon fontSize="16" as={RiPencilLine}></Icon>}
-                                
-                            >
-                                Editar
-                            </Button>
-                        </Td>
+                        { isWideVersion && <Td>03 de Abril, 2022</Td>}
                     </Tr>
                 </Tbody>
             </Table>
