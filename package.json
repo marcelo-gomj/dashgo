@@ -16,19 +16,24 @@
     "apexcharts": "^3.33.2",
     "chakra-ui": "^0.3.9",
     "framer-motion": "^6.2.3",
+    "miragejs": "^0.1.43",
     "next": "12.0.8",
     "react": "17.0.2",
     "react-apexcharts": "^1.4.0",
     "react-dom": "17.0.2",
     "react-hook-form": "^7.28.1",
     "react-icons": "^4.3.1",
+    "react-query": "^3.34.19",
     "yup": "^0.32.11"
   },
   "devDependencies": {
+    "@faker-js/faker": "^6.1.1",
+    "@types/faker": "^6.6.9",
     "@types/node": "^17.0.10",
     "@types/react": "^17.0.38",
     "eslint": "8.7.0",
     "eslint-config-next": "12.0.8",
+    "faker": "^6.6.6",
     "typescript": "^4.5.5"
   }
 }
