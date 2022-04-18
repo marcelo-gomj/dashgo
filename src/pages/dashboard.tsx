@@ -113,7 +113,6 @@ export default function Dashboard(){
                                 fontSize="lg"
                                 mb="4"
                             >Inscritos da semana</Text>
-    
                         </Box>
                         
                     </SimpleGrid>

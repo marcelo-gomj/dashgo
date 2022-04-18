@@ -29,7 +29,7 @@ export function MakeServer(){
         },
 
         seeds(server){
-            server.createList("user", 20);
+            server.createList("user", 90);
         },
         
         routes(){
@@ -54,6 +54,7 @@ export function MakeServer(){
             })
 
             this.post("/users");
+            this.get('/users/:id');
 
             this.namespace = '';
             this.passthrough();
