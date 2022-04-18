@@ -13,7 +13,7 @@ type GetUserResponse = {
     users : User[];
 }
 
-export async function getUserList(page: number) : Promise<GetUserResponse> {
+export async function getUsers(page: number) : Promise<GetUserResponse> {
     const { data, headers } = await api.get('/users', {
         params: { 
             page
@@ -42,7 +42,7 @@ export async function getUserList(page: number) : Promise<GetUserResponse> {
 }
 
 export function useUsers(page: number){
-    return useQuery(['users', page], () => getUserList(page), {
-        staleTime: 1000 * 5 // 5 seconds for reloading
+    return useQuery(['users', page], () => getUsers(page), {
+        staleTime: 1000 * 60 * 4, // 4 minutes for reloading
     })
 }

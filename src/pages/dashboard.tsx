@@ -107,7 +107,6 @@ export default function Dashboard(){
                             p={["6", "8"]}
                             bg="gray.800"
                             borderRadius={8}
-
                         >
                             <Text
                                 fontSize="lg"

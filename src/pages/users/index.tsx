@@ -13,7 +13,7 @@ import { api } from '../../services/api';
 
 export default function UserList(){
     const [page, setPage] = useState(1);
-    const {data, isLoading, isFetching, error } = useUsers(page);
+    const { data, isLoading, isFetching, error } = useUsers(page);
 
     const isWideVersion = useBreakpointValue({
         base : false,
